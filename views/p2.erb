@@ -1,0 +1,42 @@
+<html>
+  <head>
+  <meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="/normalize.css">
+  	<link rel="stylesheet" type="text/css" href="/styles.css">
+  	<title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+	<h1 id="logo"><a href="/">Tic-Tac-Toe</a></h1>
+	
+	<div class="board">	  
+		<table>
+			<tr>
+				<td><%= @game.one %></td>
+				<td><%= @game.two %></td>
+				<td><%= @game.three %></td>
+			</tr>
+
+			<tr>
+				<td><%= @game.four %></td>
+				<td><%= @game.five %></td>
+				<td><%= @game.six %></td>
+			</tr>
+
+			<tr>
+				<td><%= @game.seven %></td>
+				<td><%= @game.eight %></td>
+				<td><%= @game.nine %></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="instructions">
+		<p> Player 2, enter the number of the spot <br> you wish to place your O.</p>
+	</div>
+
+	<form method='post' action='/p1'>
+		    <label for='grid_position'>Spot Number:</label>
+		    <input type='text' name='grid_position' id='grid_position' autofocus />
+		    <input type='submit' value='Submit' />
+		</form>
+
