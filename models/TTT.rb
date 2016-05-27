@@ -1,6 +1,9 @@
 class Game
 
-	attr_accessor :one, :two, :three, :four, :five, :six, :seven, :eight, :nine, :p1win, :p2win, :space1, :space2, :space3, :space4, :space5, :space6, :space7, :space8, :space9, :resultheader
+	attr_accessor :one, :two, :three, :four, :five, :six, :seven, :eight, :nine, 
+	:p1win, :p2win, :space1, :space2, :space3, :space4, :space5, :space6, :space7, :space8, :space9, 
+	:resultheader, :p1wincounter, :p2wincounter, :p1header, :p2header
+
 
 	def initialize
 		@space1 = 0
@@ -9,7 +12,7 @@ class Game
 		@space4 = 0
 		@space5 = 0
 		@space6 = 0
-		@space7 = 0
+		@space7 = 0 
 		@space7 = 0
 		@space8 = 0
 		@space9 = 0
@@ -28,6 +31,14 @@ class Game
 		@p2win = false
 
 		@resultheader = "."
+
+		@p1wincounter = 0
+		@p2wincounter = 0
+
+		@p1header = "Player 1 has not won yet"
+		@p2header = "Player 2 has not won yet"
+		
+
 	end
 
 
@@ -104,28 +115,45 @@ class Game
 		if @space1 + @space2 + @space3 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space4 + @space5 + @space6 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space7 + @space8 + @space9 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space1 + @space4 + @space7 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space2 + @space5 + @space8 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space3 + @space6 + @space9 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space1 + @space5 + @space9 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		elsif @space3 + @space5 + @space7 == 3
 			@p1win = true
 			@resultheader = "Player 1 Wins!"
+			@p1wincounter += 1
+			@p1header = "Player 1 has #{p1wincounter} wins"
 		end
+
 	end
 
 
@@ -133,27 +161,43 @@ class Game
 		if @space1 + @space2 + @space3 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space4 + @space5 + @space6 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space7 + @space8 + @space9 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space1 + @space4 + @space7 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space2 + @space5 + @space8 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space3 + @space6 + @space9 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space1 + @space5 + @space9 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		elsif @space3 + @space5 + @space7 == 15
 			@p2win = true
 			@resultheader = "Player 2 Wins!"
+			@p2wincounter += 1
+			@p2header = "Player 2 has #{p2wincounter} wins"
 		end
 	end
 

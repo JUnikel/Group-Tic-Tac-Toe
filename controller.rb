@@ -5,7 +5,6 @@ enable :sessions
 
 get '/' do
 	@game = Game.new
-	session.clear
 	session[:game] = @game
 	erb :welcome
 end
